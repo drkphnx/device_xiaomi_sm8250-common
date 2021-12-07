@@ -500,7 +500,6 @@ firmware_directories /vendor/firmware_mnt/image/
 /sys/devices/platform/soc/*.i2c/i2c-*/*-*/iio:device*   scan_elements/in_anglvel_z_index 0664    system  system
 /sys/devices/platform/soc/*.i2c/i2c-*/*-*/iio:device*   scan_elements/in_anglvel_z_type  0664    system  system
 
-
 # standard iio temp attributes
 /sys/devices/platform/soc/*.i2c/i2c-*/*-*/iio:device*   in_temp_offset                  0664    system  system
 /sys/devices/platform/soc/*.i2c/i2c-*/*-*/iio:device*   in_temp_raw                     0664    system  system
@@ -515,3 +514,6 @@ firmware_directories /vendor/firmware_mnt/image/
 /sys/class/kgsl/kgsl-3d0    force_bus_on             0664    root  system
 /sys/class/kgsl/kgsl-3d0    force_clk_on             0664    root  system
 /sys/class/kgsl/kgsl-3d0    bus_split                0664    root  system
+
+# HBM
+/sys/devices/platform/soc/soc:qcom,dsi-display-primary	hbm				0660	system	system

@@ -40,6 +40,10 @@ ro.vendor.audio.us.proximity=true
 ro.vendor.audio.vocal.support=true
 ro.vendor.audio.voice.change.support=true
 ro.vendor.audio.voice.change.youme.support=true
+ro.vendor.audio.afe.record=true
+ro.vendor.audio.miui.karaoke.show=false
+ro.vendor.audio.multiroute=true
+ro.vendor.camera.karaok.support=true
 tunnel.audio.encode=true
 vendor.audio.adm.buffering.ms=2
 vendor.audio.capture.enforce_legacy_copp_sr=true
@@ -291,3 +295,4 @@ ro.soc.model=SM8250
 
 # WiFi
 wifi.aware.interface=wifi-aware0
+

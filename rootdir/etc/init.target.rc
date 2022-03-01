@@ -126,6 +126,7 @@ on post-fs-data
     mkdir /data/vendor/mqsas_common 0771 system system
     mkdir /data/vendor/thermal 0771 root system
     mkdir /data/vendor/thermal/config 0771 root system
+    chown gps system /dev/ttyHS1
 
 on boot
     start vendor.sensors
@@ -161,6 +162,8 @@ on boot
     chmod 0664 /sys/class/drm/card0-DSI-1/doze_brightness
     chown system system /sys/class/drm/card0-DSI-1/disp_count
     chmod 0664 /sys/class/drm/card0-DSI-1/disp_count
+    chown system system /sys/class/drm/card0-DSI-1/disp_pcc
+    chmod 0664 /sys/class/drm/card0-DSI-1/disp_pcc
     #camera motor
     chmod 0777 /sys/class/drv8846/ti-drv8846/debug
     chown system system /sys/class/backlight/panel0-backlight/brightness_clone
@@ -171,6 +174,8 @@ on boot
     chmod 0666 /sys/class/power_supply/battery/input_suspend
     # Load all wlan drivers
     exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/ qca_cld3_qca6390 qca_cld3_qca6490
+
+    write /sys/block/sda/queue/wbt_lat_usec 75000
 
 on property:persist.vendor.sys.fp.fod.large_field=1
     write sys/bus/i2c/devices/3-0049/fod_area 1
@@ -208,6 +213,54 @@ on property:vendor.audio.cit.spkcal.copy=true
     chmod 666 /mnt/vendor/persist/audio/cs35l41_cal_right.txt
     copy /data/vendor/cit/tfa9874_chk.txt /mnt/vendor/persist/audio/tfa9874_chk.txt
     chmod 666 /mnt/vendor/persist/audio/tfa9874_chk.txt
+    chmod 444 /data/vendor/cit/cs35l41_cal_spk1.bin
+    chmod 444 /data/vendor/cit/cs35l41_cal_spk1.txt
+    chmod 444 /data/vendor/cit/cs35l41_cal_spk2.bin
+    chmod 444 /data/vendor/cit/cs35l41_cal_spk2.txt
+    chmod 444 /data/vendor/cit/cs35l41_cal_spk3.bin
+    chmod 444 /data/vendor/cit/cs35l41_cal_spk3.txt
+    chmod 444 /data/vendor/cit/cs35l41_cal_spk4.bin
+    chmod 444 /data/vendor/cit/cs35l41_cal_spk4.txt
+    chmod 444 /data/vendor/cit/cs35l41_cal_spk5.bin
+    chmod 444 /data/vendor/cit/cs35l41_cal_spk5.txt
+    chmod 444 /data/vendor/cit/cs35l41_cal_spk6.bin
+    chmod 444 /data/vendor/cit/cs35l41_cal_spk6.txt
+    chmod 444 /data/vendor/cit/cs35l41_cal_spk7.bin
+    chmod 444 /data/vendor/cit/cs35l41_cal_spk7.txt
+    chmod 444 /data/vendor/cit/cs35l41_cal_spk8.bin
+    chmod 444 /data/vendor/cit/cs35l41_cal_spk8.txt
+    copy /data/vendor/cit/cs35l41_cal_spk1.bin /mnt/vendor/persist/audio/cs35l41_cal_spk1.bin
+    copy /data/vendor/cit/cs35l41_cal_spk1.txt /mnt/vendor/persist/audio/cs35l41_cal_spk1.txt
+    copy /data/vendor/cit/cs35l41_cal_spk2.bin /mnt/vendor/persist/audio/cs35l41_cal_spk2.bin
+    copy /data/vendor/cit/cs35l41_cal_spk2.txt /mnt/vendor/persist/audio/cs35l41_cal_spk2.txt
+    copy /data/vendor/cit/cs35l41_cal_spk3.bin /mnt/vendor/persist/audio/cs35l41_cal_spk3.bin
+    copy /data/vendor/cit/cs35l41_cal_spk3.txt /mnt/vendor/persist/audio/cs35l41_cal_spk3.txt
+    copy /data/vendor/cit/cs35l41_cal_spk4.bin /mnt/vendor/persist/audio/cs35l41_cal_spk4.bin
+    copy /data/vendor/cit/cs35l41_cal_spk4.txt /mnt/vendor/persist/audio/cs35l41_cal_spk4.txt
+    copy /data/vendor/cit/cs35l41_cal_spk5.bin /mnt/vendor/persist/audio/cs35l41_cal_spk5.bin
+    copy /data/vendor/cit/cs35l41_cal_spk5.txt /mnt/vendor/persist/audio/cs35l41_cal_spk5.txt
+    copy /data/vendor/cit/cs35l41_cal_spk6.bin /mnt/vendor/persist/audio/cs35l41_cal_spk6.bin
+    copy /data/vendor/cit/cs35l41_cal_spk6.txt /mnt/vendor/persist/audio/cs35l41_cal_spk6.txt
+    copy /data/vendor/cit/cs35l41_cal_spk7.bin /mnt/vendor/persist/audio/cs35l41_cal_spk7.bin
+    copy /data/vendor/cit/cs35l41_cal_spk7.txt /mnt/vendor/persist/audio/cs35l41_cal_spk7.txt
+    copy /data/vendor/cit/cs35l41_cal_spk8.bin /mnt/vendor/persist/audio/cs35l41_cal_spk8.bin
+    copy /data/vendor/cit/cs35l41_cal_spk8.txt /mnt/vendor/persist/audio/cs35l41_cal_spk8.txt
+    chmod 666 /mnt/vendor/persist/audio/cs35l41_cal_spk1.bin
+    chmod 666 /mnt/vendor/persist/audio/cs35l41_cal_spk1.txt
+    chmod 666 /mnt/vendor/persist/audio/cs35l41_cal_spk2.bin
+    chmod 666 /mnt/vendor/persist/audio/cs35l41_cal_spk2.txt
+    chmod 666 /mnt/vendor/persist/audio/cs35l41_cal_spk3.bin
+    chmod 666 /mnt/vendor/persist/audio/cs35l41_cal_spk3.txt
+    chmod 666 /mnt/vendor/persist/audio/cs35l41_cal_spk4.bin
+    chmod 666 /mnt/vendor/persist/audio/cs35l41_cal_spk4.txt
+    chmod 666 /mnt/vendor/persist/audio/cs35l41_cal_spk5.bin
+    chmod 666 /mnt/vendor/persist/audio/cs35l41_cal_spk5.txt
+    chmod 666 /mnt/vendor/persist/audio/cs35l41_cal_spk6.bin
+    chmod 666 /mnt/vendor/persist/audio/cs35l41_cal_spk6.txt
+    chmod 666 /mnt/vendor/persist/audio/cs35l41_cal_spk7.bin
+    chmod 666 /mnt/vendor/persist/audio/cs35l41_cal_spk7.txt
+    chmod 666 /mnt/vendor/persist/audio/cs35l41_cal_spk8.bin
+    chmod 666 /mnt/vendor/persist/audio/cs35l41_cal_spk8.txt
 
 service vendor.lowi /vendor/bin/sscrpcd
    class core
@@ -292,3 +345,27 @@ on post-fs-data
     # Allow system to read measured_fps
     chown system graphics /sys/class/drm/sde-crtc-0/measured_fps
     chmod 0444 /sys/class/drm/sde-crtc-0/measured_fps
+
+#####copy megvii files#####
+on property:sys.boot_completed=1
+    mkdir /data/vendor/camera/model 0777 cameraserver audio
+    mkdir /data/vendor/camera/model/rt_model 0777 cameraserver audio
+    copy /vendor/etc/camera/model/rt_model/preview_model /data/vendor/camera/model/rt_model/preview_model
+    chown cameraserver audio  /data/vendor/camera/model/rt_model/preview_model
+    chmod 0777 /data/vendor/camera/model/rt_model/preview_model
+    copy /vendor/etc/camera/model/rt_model/preview_cache /data/vendor/camera/model/rt_model/preview_cache
+    chown cameraserver audio  /data/vendor/camera/model/rt_model/preview_cache
+    chmod 0777 /data/vendor/camera/model/rt_model/preview_cache
+    copy /vendor/etc/camera/model/rt_model/preview_policy /data/vendor/camera/model/rt_model/preview_policy
+    chown cameraserver audio  /data/vendor/camera/model/rt_model/preview_policy
+    chmod 0777 /data/vendor/camera/model/rt_model/preview_policy
+    mkdir /data/vendor/camera/model/dof_model 0777 cameraserver audio
+    copy /vendor/etc/camera/model/dof_model/capture_cache /data/vendor/camera/model/dof_model/capture_cache
+    chown cameraserver audio  /data/vendor/camera/model/dof_model/capture_cache
+    chmod 0777 /data/vendor/camera/model/dof_model/capture_cache
+    copy /vendor/etc/camera/model/dof_model/capture_model /data/vendor/camera/model/dof_model/capture_model
+    chown cameraserver audio  /data/vendor/camera/model/dof_model/capture_model
+    chmod 0777 /data/vendor/camera/model/dof_model/capture_model
+    copy /vendor/etc/camera/model/dof_model/capture_policy /data/vendor/camera/model/dof_model/capture_policy
+    chown cameraserver audio  /data/vendor/camera/model/dof_model/capture_policy
+    chmod 0777 /data/vendor/camera/model/dof_model/capture_policy

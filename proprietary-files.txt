@@ -325,9 +325,9 @@ vendor/firmware/a650_zap.b02
 vendor/firmware/a650_zap.elf
 vendor/firmware/a650_zap.mdt
 
-# Graphics (Vulkan) - from LA.UM.9.12.r1-13300-SMxx50.QSSI12.0
-vendor/lib/hw/vulkan.adreno.so|ae95be239a5fc7ac66d2873a5bca1660667b1ece
-vendor/lib64/hw/vulkan.adreno.so|346bc3158cb9ff6c21f9e17389b4d3a5cb6e4d69
+# Graphics (Vulkan) - from Miui 13.0.3.0
+vendor/lib/hw/vulkan.adreno.so|18d5671471550f27021498337cd730dcc593be7b
+vendor/lib64/hw/vulkan.adreno.so|c7139eae922453b050539b87a2a20902da37bdaf
 
 # GNSS - from LA.UM.9.12.r1-13300-SMxx50.QSSI12.0
 vendor/bin/hw/android.hardware.gnss@2.1-service-qti|1ec6390ea7a2fb339d0758ccd92f5fcc3e3aa982

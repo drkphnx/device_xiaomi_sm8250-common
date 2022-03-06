@@ -465,7 +465,6 @@ vendor/firmware/ipa_uc.mdt
 
 # IRQ balance - from Miui 13.0.3.0
 vendor/bin/msm_irqbalance|8065e47d0ece486dd21f6c044dae46b578df1d8c
-vendor/etc/msm_irqbalance.conf|39d0d339b3551e44258360abdb6e55e047983485
 
 # Keymaster - from LA.UM.9.12.r1-13300-SMxx50.QSSI12.0
 vendor/bin/hw/android.hardware.keymaster@4.1-service-qti|d339c17369a16b59093303ca714eab897ffdac60

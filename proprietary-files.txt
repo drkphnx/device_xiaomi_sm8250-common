@@ -522,13 +522,13 @@ vendor/lib64/libqcodec2_utils.so|c009dbd755f5f850852939bd8f3f3d5de50570ea
 vendor/lib64/libqcodec2_v4l2codec.so|12f757483ad82e4b70d3ff51c770177d24930ded
 vendor/lib64/libvideooptfeature.so|2f302583ff4ab892b04a649d1b3080019b588d49
 
-# Media - from LA.UM.9.12.r1-13300-SMxx50.QSSI12.0
-system_ext/lib/libmmosal.so|ff554643ca1ac5c69f58e23b0e4769ce2653e27f
-system_ext/lib/libmmparser_lite.so|da793151a7092dcc7d0246cb25908587a4babfe2
-system_ext/lib64/libmmosal.so|b7caf42e3a18284615159dbee78cc1353bb57c58
-system_ext/lib64/libmmparser_lite.so|ae4e3e72f08a13786bc48301f262f60c1d5be70e
-vendor/lib/libmmosal.so|b5fc0fae23c5f17cdf444cf72986c45187b2f6aa
-vendor/lib64/libmmosal.so|1ac3149c52dfde413265720d47eae56b31f70a8b
+# Media - from Miui China 23.02.2022 Alioth
+system_ext/lib/libmmosal.so|4b81152df596a9ad10938c286e879ec3846f6a27
+system_ext/lib/libmmparser_lite.so|271cf889b40eb9c37c65fd27712811de034bd535
+system_ext/lib64/libmmosal.so|2864420a9d3727c92a02e3423c9026b07b78481e
+system_ext/lib64/libmmparser_lite.so|1266cb5cd3090e867424dd73ed6696c30cc8ff4d
+vendor/lib/libmmosal.so|130b02ef9cc2e497a1dc78a143e199630049b2e1
+vendor/lib64/libmmosal.so|3736380ae324c63fbb3a3ce20b7969dfcdc60d61
 
 # Media configs - from LA.UM.9.12.r1-13300-SMxx50.QSSI12.0
 vendor/etc/system_properties.xml|1fef83105060b01a95a790f1504e58adb1df44f1

@@ -272,8 +272,8 @@ vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so|7b67b47030f00af1c2e207995
 vendor/lib64/vendor.qti.esepowermanager@1.0.so|6d4719779fd63c2500fbdf4cc94a3ec1a5cdd685
 vendor/lib64/vendor.qti.esepowermanager@1.1.so|bd6e25eef9269451ffdc4787a056aa0f0c0c9abf
 
-# Feature enabler client - from LA.UM.9.12.r1-13300-SMxx50.QSSI12.0
-vendor/bin/feature_enabler_client|0e25e593af2f9f3520d28980ad60a67a5cc5385e
+# Feature enabler client - from Miui 13.0.3.0
+vendor/bin/feature_enabler_client|899928d99fc22576ad65dac035f9f33e0efa669d
 vendor/etc/init/feature_enabler_client.rc|7c8e7cf20093d1a6d94d7de2debd53a7e51f8c29
 
 # Gatekeeper - from LA.UM.9.12.r1-13300-SMxx50.QSSI12.0

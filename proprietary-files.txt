@@ -614,10 +614,10 @@ vendor/lib64/libOmxVpp.so|969c1846513973894263a4a589d21eed661410e7
 vendor/lib64/libOmxWmaDec.so|469de8d7503c24bcdece185172b88cb01d1218d2
 vendor/lib64/libswvdec.so|e50cc714152873d4fdcabd3ed1bbf9e635725b78
 
-# Peripheral manager - from LA.UM.9.12.r1-13300-SMxx50.QSSI12.0
-vendor/bin/pm-proxy|f27e551138d7f612943885ac698f9f88ec1acaf9
-vendor/bin/pm-service|5be0b39d724d4d38f7b5348ca2563699139b125f
-vendor/lib64/libperipheral_client.so|371cc38073c9d9bf8614f992e57a5a9891691191
+# Peripheral manager - from Miui 13.0.3.0
+vendor/bin/pm-proxy|d0fc3e8644a2e88f086524c979484f666509c262
+vendor/bin/pm-service|66df653fe8cafe2c6d62a94e58e45763a822753d
+vendor/lib64/libperipheral_client.so|76e41976c402861dc8b0755ab31b90e69705fb2d
 
 # Power-off alarm - from LA.UM.9.12.r1-13300-SMxx50.QSSI12.0
 -product/app/PowerOffAlarm/PowerOffAlarm.apk|6e3ba805cfbeb0db590f988891448345cc3698ba
